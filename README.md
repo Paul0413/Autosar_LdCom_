@@ -1,14 +1,21 @@
 # Autosar_LdCom_
-簡介：
-本專題基於AUTOSAR 規範的 OS 上實作 Large Data Communication
-(以下簡稱LdCom )模組。AUTOSAR (Automotive Open System Architecture)
-是一套車用軟體標準，其設立的主要目的即為提高軟體使用的可重複性。而
-在 AUTOSAR CP (Classic Platform) 中可分為以下三個部分：應用層
-(Application Layer)、、行環境層層(Runtime Environment Layer)以及基礎軟體層
-(Basic Software Layer)、。在層層中，同模模組的規書定義了該模模組的環為及
-與其他模組間的互動。AUTOSAR 將功能切分成同模的模組，以利開發者更
-好的進環系統維護與更新。
-本專題目的是實作LdCom 傳送端與接收端並使其能按照AUTOSAR 規
-範正常行環，專題內容包含整個模組的軟體設計及實作。與Com 模組同模
-的是，LdCom 專門處理大型資料，也就是一個IPDU (Interaction Layer Protocol
-Data Unit)內部只會有一個 Signal，並且同需要額外對Signal 進環處理。
+
+## 專案簡介
+本專題基於 **AUTOSAR** 規範的 OS 上實作 **Large Data Communication (LdCom)** 模組。AUTOSAR (Automotive Open System Architecture) 是一套車用軟體標準，主要目的為提高軟體使用的可重複性。
+
+在 AUTOSAR CP (Classic Platform) 中可分為三個層級：
+* **應用層 (Application Layer)**
+* **運行環境層 (Runtime Environment Layer)**
+* **基礎軟體層 (Basic Software Layer)**
+
+本專題目標是實作 LdCom 傳送端與接收端並使其按照規範運行。與一般 Com 模組不同，LdCom 專門處理大型資料（一個 IPDU 內部僅包含一個 Signal），且不需要額外對信號進行處理。
+
+## 實作目標
+* **模組開發**：實作 LdCom 傳送端與接收端，並確保其按照規範正常運行。
+* **資料處理**：專門處理大型資料（IPDU 內僅包含單一 Signal），不需額外進行信號處理。
+* **軟體實作**：包含整個模組的軟體設計、實作、以及與上下層模組的互動。
+
+## 技術重點
+* **開發環境**：CS+ for CC (IDE)
+* **硬體平台**：RH850 開發板
+* **實作語言**：C 語言
